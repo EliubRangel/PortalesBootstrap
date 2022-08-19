@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand">
+                    <img src="./img/vet-logo.png" width="30" height="24" class="d-inline-block align-text-top" alt="">
+                    Petland
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>              
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./mascotas.html" class="nav-link">Mascotas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./Alimentos.html" class="nav-link active">Alimentos</a>
+                        </li>
+                    </ul>   
+                </div>CSS variables
+
+            </div>   
+        </nav>
+        <div class="container">
+            <div class=" card mt-3">
+                <div class="card-body">
+                    <div class="row my-2">
+                        <div class="col">
+                            <label for="txtMarca" class="form-label">Marca del alimento:</label>
+                            <input type="text" class="form-control" id="txtMarca" placeholder="Dogshow">
+                        </div>
+                        <div class="col">
+                            <label for="txtDescripcion" class="form-label">Descripcion del alimento</label>
+                            <input type="text" class="form-control" id="txtDescripcion" placeholder="Alimento en sobre">
+                        </div>
+                        
+                    </div>
+                        <div class="row my-2">
+                            <div class="col" >
+                                <label for="txtPrecio" class="form-label ">Precio del alimento</label>
+                                <input type="text" class="form-control" id="txtPrecio" placeholder="100">
+                            </div>
+                            <div class="col">
+                                <label for="txtAnimal" class="form-label">Tipo de animal</label>
+                                <select class="form-select" name="" id="txtAnimal">
+                                    <option value="1">Perro</option>
+                                    <option value="2">Gato</option>
+                                    <option value="3">Demonio de tazmania</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="txtCodigoBarras" class="form-label">Codigo de barras </label>
+                                <input type="text" class="form-control" id="txtCodigoBarras" placeholder="1234">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+
+                
+    </body>
+</html>
