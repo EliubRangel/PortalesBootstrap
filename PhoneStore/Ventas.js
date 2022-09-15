@@ -4,7 +4,7 @@ Lista de productos
 1 - Celular Oneplus 7 pro - Precio - 10500 - 
  */
 var p1 = { codigoBarras:1, descripcion: 'Celular Oneplus 7 pro', precio:10500 };
-var p2= { codigoBarras:2, descripcion:'Funda', precio:100};
+var p2= { codigoBarras:2, descripcion:'Funda ultra chida', precio:100};
 console.log(p1);
 var products = [
     p1, p2, 
@@ -39,5 +39,12 @@ $(document).ready(function(){ // espera a que el Dom se cargue
             $('.row'+selectedProduct.codigoBarras+' .cnt').text(selectedProduct.cantidad);
             $('.row'+selectedProduct.codigoBarras+' .total').text(selectedProduct.total);
         }
-    })
+    });
+    var optionsString = '';
+    for(var i=0; i<products.length; i++){
+        var p = products[i];
+        optionsString = optionsString + '<option value="'+p.codigoBarras+'">'+p.descripcion+'</option>'
+    }
+    console.log(optionsString)
+    $('#selectProduct').html(optionsString);
 });
