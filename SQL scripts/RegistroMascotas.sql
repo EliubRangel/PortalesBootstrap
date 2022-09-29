@@ -25,7 +25,7 @@ create table Visita (
 Id int primary key,
 FechaVisita date,
 RazonVisita varchar(250),
-TipoMascota varchar(250),
+TipoMascota varchar(250),er
 NombreMascota varchar(250));
 
 

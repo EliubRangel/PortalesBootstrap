@@ -20,3 +20,15 @@ add column FechaNacimiento date;
 alter table Mascotas
 modify Nombre varchar(250) not null;
 
+select 
+	FechaVisita, Nombre, Mascotas.Id
+from Visitas
+join Mascotas 
+on IdMascota = Mascotas.Id;
+
+select 
+	v.FechaVisita, m.Nombre, m.Id
+from Visitas as v
+join Mascotas as m
+on IdMascota = m.Id;
+
