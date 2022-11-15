@@ -39,16 +39,25 @@
                         <div class="col">
                             <label for="txtNombre" class="form-label">Nombre de la mascota</label>
                             <input type="text" class="form-control" id="txtNombre" placeholder="Firulais">
+                            <div class="invalid-feedback">
+                                El nombre de la mascota es requerido.
+                            </div>                        
                         </div>
                         <div class="col">
                             <label for="txtDueno" class="form-label">Nombre del dueño</label>
                             <input type="text" class="form-control" id="txtDueno" placeholder="Eliub">
+                            <div class="invalid-feedback">
+                                El nombre del dueno es requerido.
+                            </div>
                         </div>
                     </div>
                     <div class="row my-2">
                         <div class="col">
                             <label for="txtEdad" class="form-label">Edad de la mascota</label>
-                            <input type="text" id="txtEdad" class="form-control">
+                            <input type="text" id="txtEdad" class="form-control" placeholder="1">
+                            <div class="invalid-feedback">
+                                La edad de la mascota es requerida.
+                            </div>
                         </div>
                         <div class="col">
                             <button id="btnAgregar" type="button" class="btn btn-primary">Agregar</button>
