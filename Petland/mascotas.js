@@ -7,6 +7,21 @@ const LimpiarCampos = function(){
    $('#txtEdad').val('')
 }
 
+const EliminarFila = function(id){
+    console.log('Eliminando fila');
+    $('.row'+id).remove();
+    // encontrar la posicion en la que se encuentra
+    Mascota = Mascota.filter(x => x.Id !== id);
+}
+
+const actualizarFila = function(id){
+    const mascota = Mascota.find(x => x.Id == id);
+    EliminarFila(id);
+    $('#txtNombre').val(mascota.Nombre);
+    $('#txtDueno').val(mascota.Dueno);
+    $('#txtEdad').val(mascota.Edad);
+}
+
 const btnAgregar_click = function () {
     const Nombre = $('#txtNombre').val();
     let formValido = true;
@@ -47,7 +62,7 @@ const btnAgregar_click = function () {
         }
         LimpiarCampos();
         Mascota.push(NuevaMascota);
-        $('table').append('<tr class="row'+NuevaMascota.Id+'"><td>'+Nombre+'</td><td>'+Dueno+'</td><td>'+Edad+'</td></tr>');
+        $('table').append('<tr class="row'+NuevaMascota.Id+'"><td>'+Nombre+'</td><td>'+Dueno+'</td><td>'+Edad+'</td><td><button class="btn btn-danger" onclick="EliminarFila('+NuevaMascota.Id+')"> <i class="bi bi-trash3"></i>Eliminar</button></td><td><button class="btn btn-info" onclick="actualizarFila('+NuevaMascota.Id+')"><i class="bi bi-reply"></i>Actualizar</button></td></tr>');
     }
 
 };
